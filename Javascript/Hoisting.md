@@ -4,9 +4,9 @@
 
 👉 함수 안에 있는 선언들을 모두 끌어올려서 해당 함수 유효 범위의 최상단에 선언하는 것
 
-👉 var 변수 선언과 함수선언문에서만 호이스팅이 일어난다.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var 변수/함수의 선언만 위로 끌어 올려지며, 할당은 끌어 올려지지 않는다.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let/const 변수 선언과 함수표현식에서는 호이스팅이 발생하지 않는다.
+👉 var 변수 선언과 함수선언문에서만 호이스팅이 일어난다.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var 변수/함수의 선언만 위로 끌어 올려지며, 할당은 끌어 올려지지 않는다.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let/const 변수 선언과 함수표현식에서는 호이스팅이 발생하지 않는다.
 
 
 
