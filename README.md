@@ -4,11 +4,12 @@
 
 매일매일 공부했던 내용을 기록하고자, 또한 내가 관심있는 것들을 모아모아 정리한 저장소입니다.
 
-현재 TIL 수 : _ 3
+현재 TIL 수 : _ 4
 
 ---
 ### Categories
 * [DeepDive](#deepdive)
+* [JavaScript](#javascript)
 
 ---
 
