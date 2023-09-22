@@ -282,3 +282,11 @@ export default App;
 #### componentDidCatch
 
 > 컴포넌트 내부에서 에러가 발생하면 호출되며, 에러 처리와 관련된 작업을 수행할 수 있습니다.
+
+<br/>
+
+#### 참고
+
+https://react.vlpt.us/basic/25-lifecycle.html
+
+https://blog.logrocket.com/react-lifecycle-methods-tutorial-examples/
