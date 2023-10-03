@@ -125,3 +125,6 @@ useEffect(() => {
 
 ## 정리
 > useEffect는 컴포넌트의 상태 및 생명주기 이벤트와 관련된 다양한 작업을 처리하기 위한 강력한 도구이다. 의존성 배열을 통해 작업의 트리거를 제어하고, 정리(clean-up) 함수를 사용하여 메모리 누수를 방지할 수 있다.
+
+### 참고
+https://react.dev/reference/react/useEffect
