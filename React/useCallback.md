@@ -42,3 +42,8 @@ function MyComponent() {
 
 ### React 성능 도구 활용
 > useCallback을 사용하여 성능 최적화를 수행할 때, React의 성능 도구(Ex. React DevTools)를 활용하여 컴포넌트 렌더링 및 함수 재생성을 모니터링하면 도움이 된다.
+
+
+#### 참고
+https://react.vlpt.us/basic/18-useCallback.html
+
