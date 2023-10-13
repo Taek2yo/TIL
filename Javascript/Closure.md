@@ -57,13 +57,70 @@ function () {
 ### 데이터 은닉(Data Encapsulation)
 > 클로저를 사용하여 변수와 함수를 캡슐화하고 외부에서 접근을 제한할 수 있다.
 
+```js
+function createCounter() {
+  var count = 0; // 외부에서 접근 불가능한 변수
+
+  function increment() {
+    count++;
+  }
+
+  function getCount() {
+    return count;
+  }
+
+  return {
+    increment: increment,
+    getCount: getCount
+  };
+}
+
+var counter = createCounter();
+counter.increment();
+console.log(counter.getCount()); // 1
+
+```
+*  `createCounter` 함수는 `count` 변수와 `increment`, `getCount` 함수를 포함한 객체를 반환합니다. 이로써 `count` 변수가 외부에서 직접 접근되지 않고, `increment`와 `getCount` 함수를 통해 제어된다.
+
 ### 콜백 함수(Callback Functions)
 > 이벤트 처리나 비동기 작업에서 클로저를 사용하여 상태 정보를 유지하고 콜백 함수에 전달할 수 있다.
+
+```js
+function fetchData(url, callback) {
+  // 비동기적으로 데이터를 가져온 후 콜백 함수 호출
+  setTimeout(function() {
+    var data = "데이터 내용";
+    callback(data);
+  }, 2000);
+}
+
+function process(data) {
+  console.log("데이터 처리 중: " + data);
+}
+
+fetchData("https://example.com/data", process);
+
+```
+* `fetchData` 함수는 비동기적으로 데이터를 가져오는 작업을 수행하고, 데이터를 가져온 후 `process` 콜백 함수를 호출합니다. `process` 함수는 클로저를 사용하여 외부 스코프의 데이터에 접근할 수 있습니다.
 
 ### 프라이빗 멤버(Private Members)
 > 객체 지향 프로그래밍에서 클래스의 프라이빗 멤버를 구현할 때 클로저를 활용할 수 있다.
 
+```js
+function Person(name) {
+  var privateName = name; // 프라이빗 멤버
 
+  this.getName = function() {
+    return privateName;
+  };
+}
+
+var person = new Person("John");
+console.log(person.privateName); // undefined (접근 불가능)
+console.log(person.getName()); // "John" (접근 가능)
+
+```
+* `Person` 생성자 함수는 `privateName` 변수를 가지고 있으며, 이 변수에 접근하기 위한 메소드인 getName을 제공한다. `privateName`은 외부에서 직접 접근할 수 없으며, `getName` 함수를 통해만 접근할 수 있습니다. 이로써 `privateName`은 프라이빗 멤버로 유지됩니다.
 #### 참고
 
 https://hanamon.kr/javascript-%ED%81%B4%EB%A1%9C%EC%A0%80/
