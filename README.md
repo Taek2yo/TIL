@@ -4,13 +4,14 @@
 
 매일매일 공부했던 내용을 기록하고자, 또한 내가 관심있는 것들을 모아모아 정리한 저장소입니다.
 
-현재 TIL 수 : _ 27
+현재 TIL 수 : _ 28
 
 ---
 ### Categories
 * [DeepDive](#deepdive)
 * [JavaScript](#javascript)
 * [React](#react)
+* [NetWork](#network)
 ---
 
 ### DeepDive
@@ -42,3 +43,8 @@
 * [useRef](React/useRef.md)
 * [useMemo](React/useMemo.md)
 * [React.memo](React/React.memo.md)
+
+---
+
+### NetWork
+* [주소창에-naver.com을-치면-일어나는-일](NetWork/주소창에-naver.com-을-치면-일어나는-일.md)
