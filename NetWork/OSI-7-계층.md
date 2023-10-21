@@ -1,10 +1,11 @@
 # 네트워크의 기본 OSI 7계층
 > 네트워크 프로토콜이 통신하는 구조를 7개의 계층으로 분리하여 각 계층간 상호 작동하는 방식을 정해 놓은 것. 서로 다른 컴퓨터 기기 간에 네트워크를 형성할 수 있도록 규정한 네트워크 모델 표준안.
 
-<div style="width:100%; text-align:center;" >
-<img src='https://github.com/Taek2yo/TIL/assets/110080748/46ee54f1-a1e5-4319-aebe-229e0e95d54e'/>
-<p>출처 : 해시넷</p>
+<div style="width: 100%; text-align: center;">
+  <img src='https://github.com/Taek2yo/TIL/assets/110080748/46ee54f1-a1e5-4319-aebe-229e0e95d54e' style="width: 100%; height: 500px; display: block; margin: 0 auto;" />
+  <p>출처 : 해시넷</p>
 </div>
+
 
 ## 특징
 ### 데이터 캡슐화
