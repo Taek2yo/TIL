@@ -4,7 +4,7 @@
 
 매일매일 공부했던 내용을 기록하고자, 또한 내가 관심있는 것들을 모아모아 정리한 저장소입니다.
 
-현재 TIL 수 : _ 28
+현재 TIL 수 : _ 29
 
 ---
 ### Categories
@@ -47,4 +47,6 @@
 ---
 
 ### NetWork
-* [주소창에-naver.com을-치면-일어나는-일](NetWork/주소창에-naver.com-을-치면-일어나는-일.md)
+* [주소창에 naver.com을 치면 일어나는일](NetWork/주소창에-naver.com-을-치면-일어나는-일.md)
+
+* [OSI 7계층](NetWork/OSI-7-계층.md)
