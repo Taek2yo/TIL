@@ -14,3 +14,19 @@
 
 * input 태그는 닫힌 태그라 자식을 가질 수가 없지만, button은 자식 태그를 가질 수 있고, CSS에서 가상 선택자로 꾸며주는 것도 가능하다.
 
+### 비교 예제
+
+```html
+<form>
+  <input type="submit" value="버튼" />
+</form>
+```
+
+```html
+<form>
+  <button>
+    <img src="images/button.png" alt/>
+    <span>멋있는 버튼</span>
+  </button>
+</form>
+```
