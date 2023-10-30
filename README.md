@@ -4,7 +4,7 @@
 
 매일매일 공부했던 내용을 기록하고자, 또한 내가 관심있는 것들을 모아모아 정리한 저장소입니다.
 
-현재 TIL 수 : _ 34
+현재 TIL 수 : _ 35
 
 ---
 ### Categories
@@ -39,6 +39,7 @@
 - [브라우저렌더링과정](Javascript/브라우저렌더링과정.md)
 - [구조분해할당](Javascript/구조분해할당.md)
 - [Closure](Javascript/Closure.md)
+- [Event Delegation](Javascript/이벤트위임.md)
 - [Event Bubbling, Capturing](Javascript/버블링과캡처링.md)
 ---
 
@@ -64,3 +65,4 @@
 * [주소창에 naver.com을 치면 일어나는일](NetWork/주소창에-naver.com-을-치면-일어나는-일.md)
 
 * [OSI 7계층](NetWork/OSI-7-계층.md)
+
