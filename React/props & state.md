@@ -47,24 +47,62 @@ React는 `state`의 변경을 추적하고, `setState()`` 메서드를 통해만
 ### 그렇다면, 이런 불변성은 어떻게 유지할 수 있을까?
 > state를 업데이트 할 때, 값은 같아도 새로운 참조 값을 가진 객체를 전달하는 여러 방식을 사용할 수 있다.
 
-1. Spread 연산자 (객체 및 배열)
+#### 1. Spread 연산자 (객체 및 배열)
 
-    ```js
-    // 객체의 경우
-    const updatedObject = { ...this.state.objectProperty, keyToChange: newValue };
-    this.setState({ objectProperty: updatedObject });
+```jsx
+import React, { useState } from 'react';
 
-    // 배열의 경우
-    const updatedArray = [...this.state.arrayProperty, newItem];
-    this.setState({ arrayProperty: updatedArray });
-    ```
+const ExampleComponent = () => {
+  const [person, setPerson] = useState({ name: 'John', age: 30 });
 
-2. 객체 비구조화 할당(Destructuring Assignment)
+  const changeName = (newName) => {
+    // Spread 연산자를 사용하여 객체를 복사하고 변경사항만 추가.
+    setPerson(prevPerson => ({ ...prevPerson, name: newName }));
+  };
 
-    ```js
-    const { objectProperty } = this.state;
-    this.setState({ objectProperty: { ...objectProperty, keyToChange: newValue } });
-    ```
+  return (
+    <div>
+      <p>이름 : {person.name}</p>
+      <p>나이 : {person.age}</p>
+      <button onClick={() => changeName('Alice')}>
+        이름 변경
+      </button>
+    </div>
+  );
+};
+
+export default ExampleComponent;
+```
+
+#### 2. 객체 비구조화 할당(Destructuring Assignment)
+
+```jsx
+import React, { useState } from 'react';
+
+const ExampleComponent = () => {
+  const [person, setPerson] = useState({ name: 'John', age: 30 });
+
+  // 객체 비구조화 할당을 사용하여 상태로부터 원하는 값들을 추출.
+  const { name, age } = person;
+
+  const changeName = () => {
+    // 객체 비구조화 할당을 사용하여 이름을 추출하고 업데이트.
+    setPerson(prevPerson => ({ ...prevPerson, name: 'Alice' }));
+  };
+
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+      <button onClick={changeName}>
+        Change Name
+      </button>
+    </div>
+  );
+};
+
+export default ExampleComponent;
+```
 
 
 ## 자식 컴포넌트에서 부모 컴포넌트로 데이터 전달 방법
