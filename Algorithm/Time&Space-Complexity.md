@@ -130,6 +130,8 @@ function polynomial_rule() {
 ## 시간 복잡도 예제
 > 예제를 통해서 다양한 시간 복잡도를 알아보자, 순서는 처음부터 효율이 좋고 뒤로 갈수록 효율성이 감소하는 순서이다.
 
+![Alt text](https://velog.velcdn.com/images%2Fwelloff_jj%2Fpost%2Ff503e580-c11e-4170-bba3-5e6dd6e21c14%2Fimage.png)
+
 ### O(1) 과 같은 상수(constant)
 
 ```js
@@ -272,3 +274,13 @@ function quadraticSpace(n) {
 ```
 
 * 2차원 배열을 사용하며, 배열의 크기가 `n * n`으로 증가하므로 `O(n^2)`의 공간 복잡도를 가진다
+
+
+#### 참고 자료
+[나무위키 - 시간복잡도](https://namu.wiki/w/%EC%8B%9C%EA%B0%84%20%EB%B3%B5%EC%9E%A1%EB%8F%84)
+
+[복잡도(Complexity): 시간 복잡도와 공간 복잡도, 그리고 빅오(Big-O) 표기법](https://velog.io/@welloff_jj/Complexity-and-Big-O-notation)
+
+[알고리즘의 시간 복잡도와 Big-O 쉽게 이해하기](https://blog.chulgil.me/algorithm/)
+
+[[Algorithm] 시간 복잡도, 공간 복잡도](https://velog.io/@cha-suyeon/Algorithm-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84-%EA%B3%B5%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84)
