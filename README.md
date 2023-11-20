@@ -4,7 +4,7 @@
 
 매일매일 공부했던 내용을 기록하고자, 또한 내가 관심있는 것들을 모아모아 정리한 저장소입니다.
 
-현재 TIL 수 : _ 39
+현재 TIL 수 : _ 40
 
 ---
 ### Categories
@@ -14,6 +14,7 @@
 * [JavaScript](#javascript)
 * [React](#react)
 * [NetWork](#network)
+* [Algorithm](#algorithm)
 
 ---
 ### HTML
@@ -22,13 +23,13 @@
 ### CSS
 * [margin, padding](CSS/margin과padding.md)
 
----
+<!-- ---
 ### DeepDive
 - [프로그래밍](Deep-Dive/1장-프로그래밍/1-프로그래밍.md)
 - [자바스크립트란?](Deep-Dive/2장-자바스크립트란/2-자바스크립트란.md)
 - [JS-개발환경과-실행방법](Deep-Dive/3장-자바스크립트-개발-환경과-실행-방법)
 - [변수](Deep-Dive/4장-변수)
----
+--- -->
 
 ### Javascript
 - [Function](Javascript/함수.md)
@@ -42,6 +43,13 @@
 - [Closure](Javascript/Closure.md)
 - [Event Delegation](Javascript/이벤트위임.md)
 - [Event Bubbling, Capturing](Javascript/버블링과캡처링.md)
+
+---
+
+### TypeScript
+* [Why TypeScript](TypeScript/Why-TypeScript.md)
+* [타입스크립트 기본 타입](TypeScript/Type.md)
+
 ---
 
 ### React
@@ -70,6 +78,5 @@
 
 ---
 
-### TypeScript
-* [Why TypeScript](TypeScript/Why-TypeScript.md)
-* [타입스크립트 기본 타입](TypeScript/Type.md)
+### Algorithm
+* [시간,공간복잡성과 빅오표기법](Algorithm/Time&Space-Complexity.md)
