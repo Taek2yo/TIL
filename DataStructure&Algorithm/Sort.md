@@ -355,7 +355,7 @@ console.log(heapSort([5,3,1,4,7])) // [1,3,4,5,7]
 // EX
 let arr = [3,1,6,3,4,1,5]
 
-// 각 숫자가 몇 개 나오는지 세어보면
+// 각 숫자가 몇 개 나오는지 세어보고
 1: 2개, 
 3: 2개, 
 4: 1개,
@@ -430,29 +430,47 @@ console.log(countingSort([4, 2, 2, 8, 3, 3, 1])) // [1, 2, 2, 3, 3, 4, 8]
 ### 구현
 
 ```js
-function getMaxDigit(arr) {
-  let maxDigit = 0;
-  for (let i = 0; i < arr.length; i++) {
-    maxDigit = Math.max(maxDigit, `${arr[i]}`.length);
-  }
-  return maxDigit;
-}
-
-function radixSort(arr) {
-  const maxDigit = getMaxDigit(arr);
-
-  for (let x = 0; x < maxDigit; x++) {
-    let digitBucket = new Array(10).fill(0).map((_) => []);
-    for (let i = 0; i < arr.length; i++) {
-      let digit = Math.floor(Math.abs(arr[i]) / Math.pow(10, x)) % 10;
-      digitBucket[digit].push(arr[i]);
+// 이 코드는 양의 정수 배열에 대해서만 동작한다. 
+// 음의 정수나 소수 같은 경우에는 추가적인 처리가 필요하다
+function getMax(arr, size) {
+  let max = arr[0];
+  for (let i = 1; i < size; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
     }
-    arr = [].concat(...digitBucket);
   }
-
-  return arr;
+  return max;
 }
 
+function countSort(arr, size, exp) {
+  const output = new Array(size).fill(0);
+  const count = new Array(10).fill(0);
+
+  for (let i = 0; i < size; i++) {
+    count[Math.floor(arr[i] / exp) % 10]++;
+  }
+
+  for (let i = 1; i < 10; i++) {
+    count[i] += count[i - 1];
+  }
+
+  for (let i = size - 1; i >= 0; i--) {
+    output[count[Math.floor(arr[i] / exp) % 10] - 1] = arr[i];
+    count[Math.floor(arr[i] / exp) % 10]--;
+  }
+
+  for (let i = 0; i < size; i++) {
+    arr[i] = output[i];
+  }
+}
+
+function radixSort(arr, size) {
+  const max = getMax(arr, size);
+
+  for (let exp = 1; Math.floor(max / exp) > 0; exp *= 10) {
+    countSort(arr, size, exp);
+  }
+}
 console.log(radixSort([170, 45, 75, 90, 802, 24, 2, 66]))
 // [2, 24, 45, 66, 75, 90, 170, 802]
 ```
